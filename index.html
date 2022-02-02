@@ -6,21 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/styles.css">
-    <title>Hello, world!</title>
+    <title>Landing Page</title>
   </head>
   <body>
+    <nav>
+      <h1>LOGO</h1>
+      <ul class="navbar-links">
+        <li><a href="#" class="navbar-link">Home</a></li>
+        <li><a href="#pricing-cards" class="navbar-link">Pricing</a></li>
+        <li><a href="#secondary-section" class="navbar-link">About Us</a></li>
+      </ul>
+    </nav>
     <section id="principal-section">
       <div class="">
         <h1>Look to the future</h1>
-        <h3>Work better.</h3>
+        <h3><i>Work better.</i></h3>
+
+          <form>
+            <input type="text" placeholder="Email">
+            <button type="button" name="button">Submit</button>
+          </form>
+
       </div>
       <div class="">
-        <img class="img-1" src="img/undraw_late_at_night_re_d3mx.svg">
+        <img id="img-1" src="img/undraw_late_at_night_re_d3mx.svg">
       </div>
     </section>
     <section id="secondary-section">
       <div class="">
-        <img class="img-2" src="img/undraw_working_late_re_0c3y.svg">
+        <img id="img-2" src="img/undraw_working_late_re_0c3y.svg">
       </div>
       <div class="">
         <h1>A really good work.</h1>
@@ -30,7 +44,44 @@
           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
           esse cillum dolore eu fugiat nulla pariatur.
         </p>
-      </section>
+      </div>
+    </section>
+    <section id="pricing-cards">
+      <div class="pricing-card">
+        <img src="img/Designer _Flatline.svg" class="pricing-img">
+        <h1>PRICE</h1>
+        <ul>
+          <li>1 Month / <span>$19.99</span></li>
+          <li>10hrs To Lorem</li>
+        </ul>
+        <a href="#" class="pricing-button">View</a>
+      </div>
+      <div class="pricing-card">
+        <img src="img/Fitness_Monochromatic.svg" class="pricing-img">
+        <h1>PRICE</h1>
+        <ul>
+          <li>3 Month / <span>$34.99</span></li>
+          <li>50hrs To Lorem</li>
+        </ul>
+        <a href="#" class="pricing-button">View</a>
+      </div>
+      <div class="pricing-card">
+        <img src="img/Easter bunny_Flatline.svg" class="pricing-img">
+        <h1>PRICE</h1>
+        <ul>
+          <li>6 Month / <span>$59.99</span></li>
+          <li>75hrs To Lorem</li>
+        </ul>
+        <a href="#" class="pricing-button">View</a>
+      </div>
+    </section>
+    <footer>
+      <h1>LOGO</h1>
+      <ul class="footer-links">
+        <li><a href="index.html" class="footer-link">Home</a></li>
+        <li><a href="#pricing-cards" class="footer-link">Pricing</a></li>
+        <li><a href="#secondary-section" class="footer-link">About Us</a></li>
+      </ul>
       <aside>
         <ul class="social-media">
           <li><a href=""><ion-icon name="logo-instagram" class="icon-media"></ion-icon></a></li>
@@ -38,7 +89,10 @@
           <li><a href=""><ion-icon name="logo-whatsapp" class="icon-media"></ion-icon></a></li>
         </ul>
       </aside>
+    </footer>
+      <script src="js/main.js"></script>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   </body>
 </html>

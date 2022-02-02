@@ -1,52 +1,184 @@
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
 *{
   margin:0;
   padding:0;
 }
-body{
-  background-color: #000;
+html{
+  scroll-behavior: smooth;
 }
-/* SOCIAL MEDIA ICONS*/
-
+body{
+  background-color: #6b63fa;
+}
+/*NAVBAR*/
+nav{
+  height:80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #6b63fa;
+}
+nav h1{
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+  letter-spacing:10px;
+  font-weight:200;
+}
+.navbar-links{
+  display:flex;
+  list-style: none;
+  gap:20px;
+  font-family: 'Quicksand', sans-serif;
+}
+.navbar-link{
+  text-decoration: none;
+  color:white;
+}
+.navbar-link:hover{
+  border-bottom:2px solid white;
+}
 /* PRINCIPAL SECTION */
 #principal-section{
   display:flex;
   justify-content: space-around;
   align-items: center;
   height:100vh;
-  color:white;
-  font-family: 'Montserrat', sans-serif;
+  color:#2f2e41;
+  line-height:40px;
+  flex-wrap: wrap;
 }
 #principal-section h1{
   font-weight:400;
-  font-size:45px;
-  letter-spacing:5px;
+  font-size:50px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
 }
+/* FORM */
+form input{
+  height:40px;
+  border-radius: 5px;
+  border:1px solid #6b63fa;
+  width:350px;
+  text-align: center;
+  outline:0;
+}
+form button{
+  height:40px;
+  width:200px;
+  border-radius: 5px;
+  border:none;
+  background-color: #6b63fa;
+  color: white;
+  cursor: pointer;
+  animation-name: botoncito;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+}
+
+
 /* SECONDARY SECTION */
 #secondary-section{
   display:flex;
   justify-content: space-around;
   align-items: center;
   height:100vh;
-  color:white;
-  font-family: 'Montserrat', sans-serif;
+  color:#2f2e41;
+  font-family: 'Quicksand', sans-serif;
 }
 #secondary-section h1{
   font-weight:400;
   letter-spacing:5px;
+  color:white;
 
 }
 #secondary-section p{
   width:400px;
   line-height:25px;
 }
+/* PRICING SECTION */
+#pricing-cards{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height:100vh;
+}
+.pricing-card{
+  width:275px;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid white;
+  text-align: center;
+}
+.pricing-img{
+  width:150px;
+  height:150px;
+}
+.pricing-card h1{
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 5px;
+  color:white;
+  font-weight:400;
+}
+.pricing-card ul{
+  list-style:none;
+}
+.pricing-card ul li{
+  margin:40px 0 20px 0;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 3px;
+  color:white;
+}
+.pricing-button{
+  width:100%;
+  color:white;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  border:1px solid white;
+  display: inline-block;
+  border-radius: 5px;
+}
+.pricing-button:hover{
+  border-bottom:1px solid white;
+  background-color: white;
+  color:#2f2e41;
+}
+/* FOOTER */
+footer{
+  display: flex;
+  height:50vh;
+  background-color:#2f2e41;
+  align-items:center;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+footer h1{
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+  letter-spacing:10px;
+  font-weight:200;
+}
+.footer-links{
+  list-style: none;
+  display: flex;
+  gap:20px;
+}
+.footer-link{
+  color:white;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+}
+.footer-link:hover{
+  border-bottom:2px solid white;
+}
 /* BACKGROUND IMAGES */
-.img-1{
+#img-1{
   width:550px;
   animation-name: circular;
-  animation-duration:3s;
+  animation-duration:5s;
   animation-iteration-count: infinite;
-}
-@keyframes circular{
+}@keyframes circular{
   0%{
     transform: translateX(10px);
   }
@@ -64,26 +196,61 @@ body{
   }
 }
 
-.img-2{
+#img-2{
   width:500px;
-  animation-name: circular;
-  animation-duration:3s;
-  animation-iteration-count: infinite;
 }
 .social-media{
   display:flex;
-  gap:10px;
+  gap:20px;
   justify-content: center;
+  list-style: none;
 }
 .icon-media{
-  color:white;
   height:1.7em;
   width:1.7em;
   text-decoration: none;
+  color:white;
 }
 .icon-media:hover{
   color:gray;
 }
-//GOOGLE FONTS
+;
+/* ANIMATIONS */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+@keyframes mover {
+  0%{
+    transform: translate(-100%);
+  }
+}
+@keyframes botoncito {
+    50%{
+      background:white;
+      color:black;
+      outline:1px solid black;
+    }
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width: 900px) {
+    #principal-section{
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    #secondary-section{
+      flex-wrap:wrap;
+      flex-direction: column-reverse;
+    }
+    #img-1{
+      width:350px;
+      height:350px;
+    }
+    #img-2{
+      width:350px;
+      height:350px;
+    }
+    #pricing-cards{
+      flex-direction: column;
+    }
+}
